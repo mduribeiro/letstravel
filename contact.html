@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Next Destination</title>
+    <!-- Enlace al ícono de acceso directo -->
+    <link rel="shortcut icon" href="img/aviao.png">
+    <link rel="stylesheet" href="normalize.css">
+    <!-- Enlaces a las hojas de estilo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Etiqueta meta para la configuración de la vista en dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Enlaces a las fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Botón para desplazarse hacia arriba -->
+
+
+    <button id="scrollButton">&#8593;</button>
+
+      <!-- Contenedor principal -->
+    <div class="content">
+        <header>
+            <!-- Logo del next Destination -->
+         
+            <img src="img/nextdestinationlogo.png" alt="Next Destination Logo" class="logo">
+             <!-- Barra de navegación -->
+            <div class="nav" id="nav">
+                    <!-- Seção do menu de navegação móvel -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+            </div>
+        </header>
+
+<!-- Sección de contacto -->
+<section id="contact">
+    <h2>contact us</h2>
+
+    <p>
+        Tell us more about yourself! We're excited to get to know you better. Your interests, passions, and travel preferences help us create the perfect adventure tailored just for you. 
+        
+        Don't hold back – share your dreams, your favorite destinations, or any specific activities you love. 
+        
+        The more we know, the more extraordinary we can make your journey. Let the adventure begin!
+    </p>
+
+    <!-- Formulario de contacto -->
+    <form action="" method="" enctype="text/plain">
+        <label for="nome">your name:</label>
+
+        <input type="text" id="nome" name="nome">
+
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="age">age:</label>
+        <input type="number" id="idade" name="age" min="1" max="120">
+
+        <label for="mensagem">tell us about u:</label>
+        <textarea id="mensagem" name="mensagem"></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+</section>
+
+<!-- Pie de página -->
+<footer>
+    <h5>&copy; 2023 Next Destination. All rights reserved.</h5>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

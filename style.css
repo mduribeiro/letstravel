@@ -1,0 +1,477 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow: scroll;
+    overflow-x: hidden;
+    min-height: 100vh;
+    /* Garantiza que el cuerpo de la página ocupa al menos el 100% de la altura del viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del botón de desplazamiento hacia arriba */
+button#scrollButton {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    background-color: #14ad00;
+    color: #ffffff;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    font-size: 2rem;
+    box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.2);
+    width: 4rem;
+    height: 4rem;
+}
+
+button#scrollButton:hover {
+    background-color: #14ad00;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos de la barra de navegación */
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 3rem;
+    padding-right: 2rem;
+}
+
+/* Estilos de la lista de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1eff00;
+    font-size: 1.125rem;
+}
+
+/* Estilos de las secciones */
+section {
+    padding: 3.125rem;
+    justify-content: center;
+}
+
+/* Estilos del título de las secciones */
+h2 {
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-style: large;
+    background-color: #14ad00;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    color: #000000;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-style: large;
+    background-color: #14ad00;
+
+}
+
+#destinations h3 {
+    color: #000000;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-style: large;
+    background-color: #14ad00;
+
+}
+
+#destinations img {
+    width: 100%; /* Define a largura da imagem como 100% da largura do contêiner pai */
+    max-width: 50rem; /* Define um valor máximo para a largura da imagem */
+    margin-top: 8vw; /* Define a margem superior como 5% da largura da viewport (viewport width) */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.7;
+}
+
+/* Estilos del logotipo */
+.logo {
+    position: absolute;
+    padding-top: 8rem;
+    padding-left: 2rem;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: self-start;
+}
+
+/* Estilos del título del héroe de la página */
+.heroImage h1 {
+    background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 100%),
+        url('../projeto/img/imagemfundo.png');
+    height: 30rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+/* Estilos del título principal del héroe de la página */
+h1 {
+    color: #ffffff4f;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 6rem;
+    padding-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos de las tarjetas de viaje */
+.trip {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 0.3125rem;
+    padding: 1rem;
+    box-shadow: 0 0.3125rem 0.625rem rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    margin-left: 1.375rem;
+    cursor: pointer;
+    width: 12.5rem;
+    margin: 1rem;
+}
+
+section#about p {
+    color: #ffffff;
+    line-height: 1rem;
+    white-space: pre-line;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+    display: flex;
+
+}
+
+#about img {
+    width: 100%; /* Define a largura da imagem como 100% do contêiner pai */
+    max-width: 50rem; /* Define um valor máximo para a largura da imagem */
+    margin-top: 3vw; /* Define a margem superior como 3% da largura da viewport (viewport width) */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.7;
+}
+
+
+#about h1 {
+    margin-top: 5rem;
+    color: #14ad00;
+
+}
+
+/* Cambio de tamaño de las tarjetas de viaje cuando se pasa el cursor por encima */
+.trip:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de las imágenes dentro de las tarjetas de viaje */
+.trip img {
+    border-radius: 0.3125rem;
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+/* Estilos de los títulos de las tarjetas de viaje */
+.trip h3 {
+    color: #4e4e4e;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin: 0.625rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos del párrafo dentro de las tarjetas de viaje */
+.trip p {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos del contenedor del contador de tiempo */
+.countdown-container {
+    text-align: center;
+    margin: 2.5rem;
+    margin-top: 9rem;
+}
+
+/* Estilos del círculo del contador de tiempo */
+.countdown-circle {
+    margin-top: 2.5rem;
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 50%;
+    background-color: #14ad00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2rem;
+}
+
+/* Estilos del texto dentro del círculo del contador de tiempo */
+.countdown-circle span {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+}
+
+/* Estilos del título de la promoción */
+h6 {
+    font-size: 5rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Estilos del párrafo de la sección "Acerca de nosotros" */
+#about p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.125rem;
+    text-align: center;
+    white-space: pre-line;
+}
+
+#destinations p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.125rem;
+    text-align: center;
+    white-space: pre-line;
+}
+
+
+/* Estilos para la sección de contacto */
+#contact {
+    color: white;
+    padding: 1.25rem;
+    max-width: 25rem;
+    margin: 10rem auto 2.3rem;
+    /* Define margens superior e inferior para 10rem e centraliza horizontalmente com "auto" */
+
+}
+
+/* Estilos para los campos de formulario y etiquetas */
+form {
+    max-width: 25rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.625rem;
+
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.3125rem;
+}
+
+form input,
+form textarea {
+    width: calc(100% - 1.25rem);
+    padding: 0.625rem;
+    margin-bottom: 0.9375rem;
+    border: 0.0625rem solid #fff;
+    background-color: transparent;
+    color: #fff;
+    resize: none;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    background-color: #14ad00;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #14ad00;
+    font-weight: bold;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #f9f9f9;
+    padding: 1.25rem;
+    text-align: center;
+    color: #333;
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+/* Estilos de los enlaces de redes sociales en el pie de página */
+.footer-social {
+    margin-top: 1.25rem;
+}
+
+.footer-social a {
+    display: flex;
+    align-content: flex-end;
+    margin-right: 0.625rem;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #000000;
+}
+
+/* Estilos del título del pie de página */
+h5 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+/* Estilos de los párrafos */
+#contact p {
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.2rem;
+    margin-bottom: 2rem;
+    white-space: pre-line;
+}
+
+
+/* Diseño responsivo */
+@media screen and (max-width: 48rem) {
+    .logo {
+        padding-top: 15rem;
+        padding-left: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav {
+        padding-top: 2rem;
+        padding-right: 1rem;
+    }
+
+    nav ul li {
+        margin-right: 0.3125rem;
+    }
+
+    h1 {
+        font-size: 3.75rem;
+    }
+
+    .trip {
+        margin: 1.75rem;
+
+    }
+
+    section {
+        padding: 1.25rem;
+    }
+
+    footer {
+        padding: 0.625rem;
+    }
+
+    .heroImage h1 {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact {
+        padding-left: 1rem;
+
+    }
+
+    #destinations img {
+        width: 100%; /* Define a largura da imagem como 100% da largura do contêiner pai */
+        max-width: 50rem; /* Define um valor máximo para a largura da imagem */
+        margin-top: 50vw; /* Define a margem superior como 5% da largura da viewport (viewport width) */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.7;
+    }
+
+    #about img {
+        width: 100%; /* Define a largura da imagem como 100% do contêiner pai */
+        max-width: 50rem; /* Define um valor máximo para a largura da imagem */
+        margin-top: 3vw; /* Define a margem superior como 3% da largura da viewport (viewport width) */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.7;
+    }
+    
+
+    #about h1 {
+margin-top: 10rem;
+    }
+}
